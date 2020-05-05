@@ -19,6 +19,7 @@ class ExecutorTest extends AbstractTest
 
     protected function setUp()
     {
+        ProcessFactory::$timeout = 30;
         $this->processFactory = \Mockery::mock('Webit\PHPgs\ProcessFactory');
         $this->executor = new Executor($this->processFactory);
     }

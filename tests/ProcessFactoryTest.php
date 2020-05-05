@@ -17,6 +17,7 @@ class ProcessFactoryTest extends AbstractTest
 
     protected function setUp()
     {
+        ProcessFactory::$timeout = null;
         $this->processFactory = new ProcessFactory(static::$gsPath);
     }
 
@@ -52,7 +53,11 @@ class ProcessFactoryTest extends AbstractTest
                         (string)$options,
                         (string)$output,
                         (string)$input
-                    )
+                    ),
+                    null,
+                    null,
+                    null,
+                    null
                 )
             ),
             'multiple input' => array(
@@ -71,7 +76,11 @@ class ProcessFactoryTest extends AbstractTest
                         (string)$options,
                         (string)$output,
                         (string)$input
-                    )
+                    ),
+                    null,
+                    null,
+                    null,
+                    null
                 )
             )
         );

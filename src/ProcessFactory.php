@@ -10,6 +10,9 @@ class ProcessFactory
     /** @var string */
     private $gsBin;
 
+    /** @var int */
+    public static $timeout = 60;
+
     /**
      * ProcessFactory constructor.
      * @param string $gsBin
@@ -35,7 +38,7 @@ class ProcessFactory
             (string)$output,
             (string)$input
         );
-        return Process::fromShellCommandline($cmd);
+        return Process::fromShellCommandline($cmd, null, null,null, self::$timeout);
         //return new Process($cmd);
     }
 
