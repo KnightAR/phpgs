@@ -6,7 +6,7 @@
     "keywords": ["ghostscript", "ghost script", "gs", "pdf merge", "pdf split"],
     "require" : {
         "php" : ">=5.3.9",
-        "symfony/process": "^2.3|^3.0"
+        "symfony/process": "^2.3|^3.0|^4.0|^5.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.5",

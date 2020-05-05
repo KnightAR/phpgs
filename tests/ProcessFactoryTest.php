@@ -45,7 +45,7 @@ class ProcessFactoryTest extends AbstractTest
                 $options = Options::create(
                     Device::any($this->randomString())
                 )->withSize(new Size(100, 100)),
-                new Process(
+                Process::fromShellCommandline(
                     sprintf(
                         "%s %s -sOutputFile=%s %s",
                         static::$gsPath,
@@ -64,7 +64,7 @@ class ProcessFactoryTest extends AbstractTest
                 ),
                 $output = Output::create($this->randomPathname()),
                 $options = Options::create(),
-                new Process(
+                Process::fromShellCommandline(
                     sprintf(
                         "%s %s -sOutputFile=%s %s",
                         static::$gsPath,

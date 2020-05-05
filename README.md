@@ -9,6 +9,8 @@ It also provides a simple tool for **PDF** pages splitting / merging.
 composer require webit/phpgs=^1.0
 ```
 
+Edit ```nano /etc/ImageMagick-6/policy.xml``` and change the following line ```<policy domain="coder" rights="none" pattern="PDF" />``` to ```<policy domain="coder" rights="read|write" pattern="PDF" />``` or Imagemagick will return a not authorized error.
+
 ## Usage
 
 ### Executor

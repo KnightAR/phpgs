@@ -29,14 +29,14 @@ class ProcessFactory
     {
         $this->ensureOutputDirExists($output);
         $cmd = sprintf(
-            '%s %s -sOUTPUTFILE=%s %s',
+            '%s %s -sOutputFile=%s %s',
             $this->gsBin,
             (string)$options,
             (string)$output,
             (string)$input
         );
-
-        return new Process($cmd);
+        return Process::fromShellCommandline($cmd);
+        //return new Process($cmd);
     }
 
     /**
